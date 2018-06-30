@@ -6,4 +6,8 @@ module.exports = {
       },
     }]
   ],
+  options: {
+    port: 5000,
+    output: "dist",
+  },
 };
