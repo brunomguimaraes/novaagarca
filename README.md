@@ -28,7 +28,7 @@ yarn
 yarn start
 ```
 
-5.  Espere um pouco e projeto estará disponível em http://localhost:5000
+5.  Espere um pouco e a página do projeto estará disponível em http://localhost:5000
     1.  A porta do projeto pode ser configurada em [.neutrinorc.js](./.neutrinorc.js), `options.port`
 
 ### Outros comandos
