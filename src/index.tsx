@@ -37,7 +37,7 @@ const render = () =>
 	);
 
 if (module.hot) {
-	module.hot.accept("./containers/App/index", render);
+	module.hot.accept(undefined, render);
 }
 
 render();

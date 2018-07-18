@@ -1,5 +1,5 @@
 interface NodeModule {
 	hot: {
-		accept(path: string, fn: () => void): void;
+		accept(path: string | undefined, fn: () => void): void;
 	};
 }
