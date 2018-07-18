@@ -1,13 +1,24 @@
-module.exports = {
-  use: [
-    ["@cubos/neutrino-preset-web", {
-      sass: {
-        includePaths: ["src/style"],
+const webPreset = require("@cubos/neutrino-preset-web");
+
+/**
+ * Neutrino setup customizer
+ *
+ * @param {webPreset.INeutrino} neutrino
+ */
+module.exports = (neutrino) => {
+  neutrino.use(webPreset.middleware, {
+    react: {
+      html: {
+        title: "Projeto da Cubos",
       },
-    }]
-  ],
-  options: {
+    },
+    sass: {
+      includePaths: ["src/style"],
+    },
+  });
+
+  neutrino.options = {
     port: 5000,
     output: "dist",
-  },
+  };
 };
