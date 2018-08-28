@@ -45,7 +45,7 @@ yarn start
 3. Importe o plugin usando `require`
 4. Dentro do `module.exports` adicione a configuração utilizando `neutrino.config.plugin("NomeDoSeuPlugin").use(construtorDoPlugin, [argumento1 do construtor, arg2 do construtor, ...])`
 
-```
+```javascript
 const webPreset = require("@cubos/neutrino-preset-web");
 const faviconPlugin = require("favicons-webpack-plugin");
 
