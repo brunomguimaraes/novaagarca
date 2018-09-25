@@ -37,3 +37,25 @@ yarn start
 - Para compilar o projeto com otimizações para ambiente de produção, execute `yarn build`
   - O projeto compilado estará disponível na pasta dist
   - A pasta de destino pode ser configurada em [.neutrinorc.js](./.neutrinorc.js), `options.output`
+
+
+## Como adicionar plugins do webpack
+1. Instale o plugin utilizando o Yarn ou NPM.
+2. Vá no arquivo `.neutrinorc.js` do seu projeto.
+3. Importe o plugin usando `require`
+4. Dentro do `module.exports` adicione a configuração utilizando `neutrino.config.plugin("NomeDoSeuPlugin").use(construtorDoPlugin, [argumento1 do construtor, arg2 do construtor, ...])`
+
+```javascript
+const webPreset = require("@cubos/neutrino-preset-web");
+const faviconPlugin = require("favicons-webpack-plugin");
+
+module.exports = neutrino => {
+
+	neutrino.use(webPreset.middleware, {});
+	
+	neutrino.config.plugin("Favicon").use(faviconPlugin, ["./src/assets/favicon.png"]);
+	
+	neutrino.options = { port: 5000, output: "dist" };
+	
+};
+```
