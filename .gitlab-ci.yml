@@ -1,0 +1,63 @@
+stages:
+    - build
+    - deploy
+
+Build Master:
+    image: node
+    stage: build
+    only:
+        - master
+    script:
+        - yarn install
+        - NODE_ENV=production ENV=production node_modules/webpack/bin/webpack.js
+    artifacts:
+        paths:
+            - dist/
+
+Build Staging:
+    image: node
+    stage: build
+    only:
+        - staging
+    script:
+        - yarn install
+        - NODE_ENV=production ENV=staging node_modules/webpack/bin/webpack.js
+    artifacts:
+        paths:
+            - dist/
+
+Build Develop:
+    image: node
+    stage: build
+    only:
+        - develop
+    script:
+        - yarn install
+        - NODE_ENV=production ENV=develop node_modules/webpack/bin/webpack.js
+    artifacts:
+        paths:
+            - dist/
+
+Deploy Master:
+    image: registry.cubos.io/cubos/mc
+    stage: deploy
+    only:
+        - master
+    script:
+        - mc cp -r dist/ cubos2/fila.zakpay.io
+
+Deploy Staging:
+    image: registry.cubos.io/cubos/mc
+    stage: deploy
+    only:
+        - staging
+    script:
+        - mc cp -r dist/ cubos2/staging.fila.zakpay.io
+
+Deploy Develop:
+    image: registry.cubos.io/cubos/mc
+    stage: deploy
+    only:
+        - develop
+    script:
+        - mc cp -r dist/ cubos2/develop.fila.zakpay.io
