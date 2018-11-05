@@ -23,6 +23,7 @@
 		"@cubos/prettier": "latest",
 		"@cubos/tsconfig": "latest",
 		"@cubos/tslint": "latest",
+		"@types/history": "^4.7.2",
 		"@types/node": "^10.12.2",
 		"@types/react": "^16.4.18",
 		"@types/react-dom": "^16.0.9",

@@ -1,7 +1,16 @@
+import { RootStore } from "./";
 import { observable, action, computed } from "mobx";
 
 export class CounterStore {
-	@observable public count: number = 0;
+	protected rootStore: RootStore;
+
+	@observable
+	public count: number = 0;
+
+	@computed
+	public get formatedCount() {
+		return `Contador: ${this.count}`;
+	}
 
 	@action
 	public incrementCount = () => {
@@ -18,8 +27,7 @@ export class CounterStore {
 		this.count = 0;
 	};
 
-	@computed
-	public get formatedCount() {
-		return `Contador: ${this.count}`;
+	public constructor(rootStore: RootStore) {
+		this.rootStore = rootStore;
 	}
 }
