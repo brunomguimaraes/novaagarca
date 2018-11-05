@@ -20,6 +20,7 @@ export class About extends React.Component<{}, {}> {
 								<li>React Router DOM</li>
 							</ul>
 							<li>Sass</li>
+							<li>Less (used for ant-design)</li>
 							<li>Hot Reload</li>
 							<li>Source Map</li>
 							<li>Typescript 2.8</li>
@@ -36,8 +37,16 @@ export class About extends React.Component<{}, {}> {
 						</ul>
 					</div>
 					<div className={s.imgContent}>
-						<img className={s.image} src={reactImg} alt="Logo React" />
-						<img className={s.image} src={mobxImg} alt="Logo Mobx" />
+						<img
+							className={s.image}
+							src={reactImg}
+							alt="Logo React"
+						/>
+						<img
+							className={s.image}
+							src={mobxImg}
+							alt="Logo Mobx"
+						/>
 					</div>
 				</div>
 			</div>

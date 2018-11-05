@@ -7,10 +7,10 @@ import { About } from "../About";
 
 require("./style.scss");
 
-class App extends React.Component {
+export class App extends React.Component {
 	public render() {
 		return (
-			<React.Fragment>
+			<>
 				<Header />
 
 				<Switch>
@@ -22,9 +22,7 @@ class App extends React.Component {
 					<Route path="/home" component={Home} />
 					<Route path="/about" component={About} />
 				</Switch>
-			</React.Fragment>
+			</>
 		);
 	}
 }
-
-export default App;

@@ -8,7 +8,7 @@ import { AppContainer } from "react-hot-loader";
 
 import { CounterStore } from "./stores";
 
-import App from "./containers/App";
+import { App } from "./containers/App";
 
 const routerStore = new RouterStore();
 const counterStore = new CounterStore();

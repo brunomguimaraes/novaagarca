@@ -3,7 +3,6 @@ const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const DEV_MODE = process.env.NODE_ENV !== "production";
@@ -142,7 +141,6 @@ const config = {
             "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development"),
             "process.env.ENV": JSON.stringify(process.env.ENV || "development"),
         }),
-        // new BundleAnalyzerPlugin({ openAnalyzer: false, analyzerMode: "static" }),
         new ForkTsCheckerWebpackPlugin({
             tsconfig: path.join(__dirname, "./tsconfig.json"),
         }),
