@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cubos Boilerplate</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <script type="text/javascript">
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (sws) {
+                sws.forEach(function (sw) { sw.unregister() });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
