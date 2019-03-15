@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { Logo } from "../Logo";
+import { Phone } from "../Phone";
 
 const s = require("./style.scss");
 
@@ -8,22 +9,32 @@ export class Header extends React.Component<{}, {}> {
 	public render() {
 		return (
 			<header className={s.header}>
-				<Logo />
 				<Link to="/" className={s.title}>
-					Boilerplate React/Mobx
+					<Logo />
 				</Link>
 				<ul className={s.menu}>
 					<li>
 						<Link className={s.menuItem} to="/">
-							Home
+							<span>A Pousada</span>
+						</Link>
+					</li>
+					<li>
+						<Link className={s.menuItem} to="/">
+							Acomodações
+						</Link>
+					</li>
+					<li>
+						<Link className={s.menuItem} to="/">
+							Arraial
 						</Link>
 					</li>
 					<li>
 						<Link className={s.menuItem} to="/about">
-							About
+							Contato
 						</Link>
 					</li>
 				</ul>
+				<Phone />
 			</header>
 		);
 	}

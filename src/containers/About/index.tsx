@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Input } from "antd";
 
 const s = require("./style.scss");
 const reactImg = require("../../assets/img/react.svg");

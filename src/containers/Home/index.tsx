@@ -1,35 +1,35 @@
 import * as React from "react";
-import { inject, observer } from "mobx-react";
+// import { inject, observer } from "mobx-react";
 
-import { CounterStore } from "../../stores";
+// import { CounterStore } from "../../stores";
 
 const s = require("./style.scss");
 
-interface IProps {
-	counterStore: CounterStore;
-}
+// interface IProps {
+// 	counterStore: CounterStore;
+// }
 
-@inject("counterStore")
-@observer
-export class Home extends React.Component<IProps, {}> {
-	private incrementCount = () => {
-		this.props.counterStore.incrementCount();
-	};
+// @inject("counterStore")
+// @observer
+export class Home extends React.Component<{}, {}> {
+	// private incrementCount = () => {
+	// 	this.props.counterStore.incrementCount();
+	// };
 
-	private decrementCount = () => {
-		this.props.counterStore.decrementCount();
-	};
+	// private decrementCount = () => {
+	// 	this.props.counterStore.decrementCount();
+	// };
 
-	private resetCount = () => {
-		this.props.counterStore.resetCount();
-	};
+	// private resetCount = () => {
+	// 	this.props.counterStore.resetCount();
+	// };
 
 	public render() {
-		const formatedCount = this.props.counterStore.formatedCount;
+		// 	const formatedCount = this.props.counterStore.formatedCount;
 
 		return (
 			<div className={s.container}>
-				<div className={s.home}>
+				{/* <div className={s.home}>
 					<div className={s.counter}>
 						<span className={s.count}>{formatedCount}</span>
 						<div className={s.rowButton}>
@@ -53,7 +53,7 @@ export class Home extends React.Component<IProps, {}> {
 							</button>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		);
 	}

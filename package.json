@@ -7,10 +7,12 @@
 		"dev": "npx webpack-dev-server"
 	},
 	"dependencies": {
+		"antd": "^3.15.0",
 		"mobx": "^5.5.2",
 		"mobx-react": "^5.3.6",
 		"mobx-react-router": "^4.0.5",
 		"react": "^16.6.0",
+		"react-animated-slider": "^1.1.4",
 		"react-dom": "^16.6.0",
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1"

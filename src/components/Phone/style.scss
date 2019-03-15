@@ -1,0 +1,21 @@
+@import "global.scss";
+
+.phoneContainer {
+  background-color: $lightBlue;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  white-space: nowrap
+}
+
+.phoneIcon {
+
+  margin-right: 8px;
+  padding-top: 3px;
+}
+
+.phoneNumber {
+  color: $white
+}
