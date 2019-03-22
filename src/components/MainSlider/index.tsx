@@ -3,8 +3,15 @@ import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 
 const s = require("./style.scss");
+const footOnSandImg = require("../../assets/img/sandfoot.jpg");
 
 const content = [
+	{
+		title: "Memento Mori",
+		description:
+			"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.",
+		image: footOnSandImg,
+	},
 	{
 		title: "Vulputate Mollis Ultricies Fermentum Parturient",
 		description:
